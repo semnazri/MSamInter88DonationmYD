@@ -173,10 +173,11 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/imageView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_brightness_1_black_24dp" />
+                        android:src="@drawable/merapi" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -194,10 +195,11 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/imageView2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_brightness_1_black_24dp" />
+                        android:src="@drawable/tangan" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -215,10 +217,11 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/imageView3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_brightness_1_black_24dp" />
+                        android:src="@drawable/family" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -247,11 +250,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_brightness_1_black_24dp" />
+                        android:src="@drawable/sumbangan" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:text="Dhuafa"
                         android:textAlignment="center"
                         android:textColor="@color/black" />
@@ -265,14 +269,17 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/imageView4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_brightness_1_black_24dp" />
+                        android:src="@drawable/topeng" />
 
                     <TextView
+                        android:id="@+id/textView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:text="Budaya"
                         android:textAlignment="center"
                         android:textColor="@color/black" />
@@ -286,14 +293,16 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/imageView5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_brightness_1_black_24dp" />
+                        android:src="@drawable/tangan_2" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:text="Agama"
                         android:textAlignment="center"
                         android:textColor="@color/black" />
@@ -311,9 +320,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
-                android:orientation="vertical">
+                android:background="@color/abuabu"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -331,26 +342,30 @@
             </LinearLayout>
 
 
-            <LinearLayout
+            <android.support.design.widget.CoordinatorLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:paddingTop="10dp"
+                android:layout_height="match_parent"
+                android:background="@color/abuabu"
                 android:orientation="vertical">
 
                 <android.support.v4.view.ViewPager
                     android:id="@+id/organisasi_viewpager"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="150dp">
 
-                <android.support.design.widget.TabLayout
-                    android:id="@+id/oraganisasi_tab_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    app:tabBackground="@drawable/tab_selector"
-                    app:tabGravity="center"
-                    app:tabIndicatorHeight="0dp" />
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/oraganisasi_tab_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_gravity="bottom"
+                        app:tabBackground="@drawable/tab_selector_black"
+                        app:tabGravity="center"
+                        app:tabIndicatorHeight="0dp" />
+                </android.support.v4.view.ViewPager>
 
-            </LinearLayout>
+
+            </android.support.design.widget.CoordinatorLayout>
 
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>

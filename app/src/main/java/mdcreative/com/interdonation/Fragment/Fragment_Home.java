@@ -3,6 +3,8 @@ package mdcreative.com.interdonation.Fragment;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -36,7 +38,9 @@ public class Fragment_Home extends Fragment {
     private String[] headline = {"Donasi Gn. Sinabung 1","Donasi Gn. Sinabung 2","Donasi Gn. Sinabung 1"};
     private String[] lokasi = {"Sumatra Utara, Indonesia 1","Sumatra Utara, Indonesia 2", "Sumatra Utara, Indonesia 3"};
     private ViewPagerAdapter adapter;
+    public static TabLayout tabLayout;
     private OrganisasiPagerAdapter adapter_organisasi;
+    public static int int_items = 2;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -64,9 +68,8 @@ public class Fragment_Home extends Fragment {
         });
         pager = (ViewPager) view.findViewById(R.id.photos_viewpager);
         pager_organisasi = (ViewPager) view.findViewById(R.id.organisasi_viewpager);
-
-        TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
-        tabLayout.setupWithViewPager(pager, true);
+        tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
+//        tabLayout.setupWithViewPager(pager, true);
 
         TabLayout tabl_organisasi = (TabLayout) view.findViewById(R.id.oraganisasi_tab_layout);
         tabl_organisasi.setupWithViewPager(pager_organisasi,true);
@@ -74,8 +77,36 @@ public class Fragment_Home extends Fragment {
         adapter = new ViewPagerAdapter(getActivity(),image, headline, lokasi);
         pager.setAdapter(adapter);
 
-        adapter_organisasi = new OrganisasiPagerAdapter(getActivity());
-        pager_organisasi.setAdapter(adapter_organisasi);
+        pager_organisasi.setAdapter(new Adapter(getChildFragmentManager()));
+        tabLayout.post(new Runnable() {
+            @Override
+            public void run() {
+                tabLayout.setupWithViewPager(pager, true);            }
+        });
         return view;
+    }
+
+    static class Adapter extends FragmentPagerAdapter {
+
+        public Adapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            switch (position) {
+                case 0:
+                    return new Fragment_top3_1();
+                case 1:
+                    return new Fragment_top3_1();
+                default:
+                    return null;
+            }
+        }
+
+        @Override
+        public int getCount() {
+            return int_items;
+        }
     }
 }

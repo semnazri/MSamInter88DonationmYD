@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/InterDonation.iml" filepath="$PROJECT_DIR$/InterDonation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MSamInter88DonationmYD.iml" filepath="$PROJECT_DIR$/MSamInter88DonationmYD.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
