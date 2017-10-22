@@ -4,6 +4,8 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,19 +32,10 @@ public class Fragment_login extends Fragment {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog = new Dialog(getActivity());
-                dialog.setContentView(R.layout.layoutdialog);
-                dialog.setTitle("Waktu Pengiriman");
-
-                Button btn_proced = (Button) dialog.findViewById(R.id.btn_ok);
-                btn_proced.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent i = new Intent(getActivity(), MainActivity.class);
-                        startActivity(i);
-                    }
-                });
-                dialog.show();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.add(R.id.container_login, new Fragment_Fromlogin());
+                fragmentTransaction.commit();
 
             }
         });
