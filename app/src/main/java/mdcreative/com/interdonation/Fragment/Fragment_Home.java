@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import mdcreative.com.interdonation.Adapter.OrganisasiPagerAdapter;
 import mdcreative.com.interdonation.Adapter.ViewPagerAdapter;
@@ -41,6 +42,7 @@ public class Fragment_Home extends Fragment {
     public static TabLayout tabLayout;
     private OrganisasiPagerAdapter adapter_organisasi;
     public static int int_items = 2;
+    private LinearLayout ll;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -82,6 +84,14 @@ public class Fragment_Home extends Fragment {
             @Override
             public void run() {
                 tabLayout.setupWithViewPager(pager, true);            }
+        });
+
+        ll = (LinearLayout) view.findViewById(R.id.linear_bencana_alam);
+        ll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
         });
         return view;
     }

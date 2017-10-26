@@ -32,10 +32,13 @@ public class Fragment_login extends Fragment {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.add(R.id.container_login, new Fragment_Fromlogin());
-                fragmentTransaction.commit();
+
+                startActivity(new Intent(getActivity(), MainActivity.class));
+
+//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.add(R.id.container_login, new Fragment_Fromlogin());
+//                fragmentTransaction.commit();
 
             }
         });
