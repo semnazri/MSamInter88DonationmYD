@@ -24,6 +24,11 @@
         <activity
             android:name="mdcreative.com.interdonation.LoginActivity"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:parentActivityName=".MainActivity"
+            android:name="mdcreative.com.interdonation.ActivityCategories"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

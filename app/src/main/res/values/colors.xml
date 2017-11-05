@@ -10,4 +10,6 @@
     <color name="black_alpha_40">#66000000</color>
     <color name="abuabu">#cfcfcf</color>
     <color name="red">#ea2121</color>
+    <color name="red_opac">#60ea2121</color>
+    <color name="yellow">#e0bc56</color>
 </resources>

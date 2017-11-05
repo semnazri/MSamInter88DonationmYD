@@ -1,5 +1,6 @@
 package mdcreative.com.interdonation.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -15,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import mdcreative.com.interdonation.ActivityCategories;
 import mdcreative.com.interdonation.Adapter.OrganisasiPagerAdapter;
 import mdcreative.com.interdonation.Adapter.ViewPagerAdapter;
 import mdcreative.com.interdonation.MainActivity;
@@ -43,6 +45,7 @@ public class Fragment_Home extends Fragment {
     private OrganisasiPagerAdapter adapter_organisasi;
     public static int int_items = 2;
     private LinearLayout ll;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -90,7 +93,7 @@ public class Fragment_Home extends Fragment {
         ll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(getActivity(), ActivityCategories.class));
             }
         });
         return view;
