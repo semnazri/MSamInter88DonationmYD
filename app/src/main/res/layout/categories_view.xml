@@ -10,43 +10,45 @@
 
 
         <LinearLayout
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/red"
             android:orientation="vertical"
-            android:background="@color/red">
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
 
             <TextView
                 android:id="@+id/title_categories"
-                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Aksi Sosial"
+                android:layout_marginTop="20dp"
                 android:scrollbarSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
+                android:text="Aksi Sosial"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
             <TextView
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
                 android:id="@+id/categories_desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                android:textColor="@color/white"/>
+                android:textColor="@color/white" />
 
 
         </LinearLayout>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_categories"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" />
     </LinearLayout>
 
 
