@@ -38,7 +38,7 @@ public class Fragment_categories_view extends Fragment {
 
         eventModels = getEvent();
         rv.setHasFixedSize(true);
-        lm = new LinearLayoutManager(getContext());
+        lm = new LinearLayoutManager(getActivity());
         rv.setLayoutManager(lm);
         adapter = new Categories_Adapter(getActivity(), eventModels);
         rv.setAdapter(adapter);
