@@ -29,6 +29,11 @@
             android:parentActivityName=".MainActivity"
             android:name="mdcreative.com.interdonation.ActivityCategories"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:parentActivityName=".MainActivity"
+            android:name="mdcreative.com.interdonation.Activity_detail_donation"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

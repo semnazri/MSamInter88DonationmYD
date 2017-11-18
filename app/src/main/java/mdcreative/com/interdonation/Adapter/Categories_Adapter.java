@@ -1,6 +1,7 @@
 package mdcreative.com.interdonation.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
+import mdcreative.com.interdonation.Activity_detail_donation;
 import mdcreative.com.interdonation.Model.EventModel;
 import mdcreative.com.interdonation.R;
 import mdcreative.com.interdonation.ViewHolder.EventViewHolder;
@@ -33,6 +35,13 @@ public class Categories_Adapter extends RecyclerView.Adapter<EventViewHolder> {
     public EventViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_donation, parent, false);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(mContext, Activity_detail_donation.class);
+                mContext.startActivity(i);
+            }
+        });
 
         return new EventViewHolder(view);
     }

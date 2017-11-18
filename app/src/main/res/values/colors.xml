@@ -12,4 +12,5 @@
     <color name="red">#ea2121</color>
     <color name="red_opac">#60ea2121</color>
     <color name="yellow">#e0bc56</color>
+    <color name="red_toolbar">#ea4335</color>
 </resources>
